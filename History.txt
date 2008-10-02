@@ -1,3 +1,12 @@
+== 1.0.8
+* fixing ruby 1.9 incompatibility ("when cond: do_this" changed into "when cond then do_this")
+
+== 1.0.7
+* ?
+
+== 1.0.5
+* ?
+
 == 1.0.4
 
 * added camping/gitweb.rb frontend

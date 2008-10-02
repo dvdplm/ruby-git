@@ -40,11 +40,11 @@ require 'git/stash'
 # open a bare repository, initialize a new repo or clone an
 # existing remote repository.
 #
-# Author::    Scott Chacon (mailto:schacon@gmail.com)
+# Author::    David Palm (mailto: dvdplm@gmail.com), Scott Chacon (mailto:schacon@gmail.com)
 # License::   MIT License
 module Git
 
-  VERSION = '1.0.4'
+  VERSION = '1.0.8'
   
   # open a bare repository
   #
@@ -93,4 +93,12 @@ module Git
     Base.clone(repository, name, options)
   end
     
+end
+
+unless "string".respond_to?(:to_a)
+  String.class_eval <<-CODE
+    def to_a
+      lines.to_a
+    end
+  CODE
 end

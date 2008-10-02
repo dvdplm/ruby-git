@@ -80,7 +80,7 @@ class TestTreeOps < Test::Unit::TestCase
           assert_equal('b40f7a9072cdec637725700668f8fdebe39e6d38', tr)
         end
         
-        c = g.commit_tree(tr, :parents => 'HEAD')
+        c = g.commit_tree(tr, :parents => ['HEAD'])
         assert(c.commit?)
         assert_equal('b40f7a9072cdec637725700668f8fdebe39e6d38', c.gtree.sha)
         

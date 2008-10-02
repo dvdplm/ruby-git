@@ -345,10 +345,10 @@ module GitWeb::Views
     ext = File.extname(@file).gsub('.', '')
     
     case ext
-      when 'rb' : classnm = 'sh_ruby'
-      when 'js' : classnm = 'sh_javascript'
-      when 'html' : classnm = 'sh_html'
-      when 'css' : classnm = 'sh_css'
+      when 'rb' then classnm = 'sh_ruby'
+      when 'js' then classnm = 'sh_javascript'
+      when 'html' then classnm = 'sh_html'
+      when 'css' then classnm = 'sh_css'
     end
     
     a.options 'repo', :href => R(View, @repo)
